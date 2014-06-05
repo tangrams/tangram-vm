@@ -72,19 +72,24 @@ package {
 }
 
 exec { "createuser":
-  command => "sudo su -p - postgres -c \"createuser osm -s -d\""
+  command => "createuser osm -s -d",
+	user => postgres
 }
 exec { "createdb":
-  command => "sudo su -p - postgres -c \"createdb -O osm osm\""
+  command => "createdb -O osm osm",
+	user => postgres
 }
 exec { "postgres-extension:hstore":
-  command => "sudo su -p - postgres -c 'psql -d osm -c \"CREATE EXTENSION hstore;\"'"
+  command => "psql -d osm -c \"CREATE EXTENSION hstore;\"",
+	user => postgres
 }
 exec { "postgres-extension:adminpack":
-  command => "sudo su -p - postgres -c 'psql -d osm -c \"CREATE EXTENSION adminpack;\"'"
+  command => "psql -d osm -c \"CREATE EXTENSION adminpack;\"",
+	user => postgres
 }
 exec { "postgres-extension:postgis":
-  command => "sudo su -p - postgres -c 'psql -d osm -c \"CREATE EXTENSION postgis;\"'"
+  command => "psql -d osm -c \"CREATE EXTENSION postgis;\"",
+	user => postgres
 }
 
 
@@ -119,22 +124,22 @@ package {
 	"shapely": 
 		ensure => latest,
 		provider => pip,
-		require => Package['python-pip'],
+		require => Package['python-pip'];
 	"PIL": 
 		ensure => latest,
 		provider => pip,
-		require => Package['python-pip'],
+		require => Package['python-pip'];
 	"modestmaps": 
 		ensure => latest,
 		provider => pip,
-		require => Package['python-pip'],
+		require => Package['python-pip'];
 	"simplejson": 
 		ensure => latest,
 		provider => pip,
-		require => Package['python-pip'],
+		require => Package['python-pip'];
 	"werkzeug": 
 		ensure => latest,
 		provider => pip,
-		require => Package['python-pip'],
+		require => Package['python-pip'];
 }
 
