@@ -113,4 +113,4 @@ In a new terminal window, get the vector-map repo and start the HTTP server:
     cd vector-map
     python -m SimpleHTTPServer 9000
 
-In a browser: http://localhost:9000/#mapzen-local,40.70519687658815,-74.01049375534059,16
+In a browser: <http://localhost:9000/#mapzen-local,40.70519687658815,-74.01049375534059,16>
