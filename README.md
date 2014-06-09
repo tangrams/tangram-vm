@@ -12,11 +12,7 @@ A Vagrant VM for setting up and running vector-map (https://github.com/bcamper/v
 
 ###vector-map vm setup
 
-These are the steps used to provision the VM. Eventually this will be automated with Puppet.
-
-    # clone the repository
-    git clone git@github.com:meetar/vector-map-vm.git
-    cd vector-map-vm
+After cloning this repository and starting a terminal window inside the directory, the steps below will provision the VM. Eventually this will be automated with Puppet.
 
     # start the VM
     vagrant up
