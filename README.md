@@ -3,6 +3,8 @@ vector-map-vm
 
 A Vagrant VM for setting up and running vector-map (https://github.com/bcamper/vector-map).
 
+![vector-map render of lower Manhattan](https://pbs.twimg.com/media/BpuBdL_CEAAhpWw.png:large)
+
 ###Requirements:
 
 - VirtualBox (https://www.virtualbox.org/)
