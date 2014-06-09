@@ -109,7 +109,6 @@ Then save the file and:
 In a new terminal window, get the vector-map repo and start the HTTP server:
 
     vagrant ssh
-    cd ~
     git clone git@github.com:bcamper/vector-map.git
     cd vector-map
     python -m SimpleHTTPServer 9000
