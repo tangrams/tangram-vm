@@ -88,7 +88,6 @@ Then save the file and:
 
     sudo pip install --allow-external PIL --allow-unverified PIL PIL modestmaps simplejson werkzeug
 
-    sudo python setup.py install
     sudo pip install Shapely
 
     sudo apt-get install -y unzip
