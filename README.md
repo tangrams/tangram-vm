@@ -30,17 +30,13 @@ After cloning this repository and starting a terminal window inside the director
     sudo apt-get -y install python-software-properties
     sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
 
-    echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" | \
-        sudo tee /etc/apt/sources.list.d/postgis.list
-    wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | \
-        sudo apt-key add -
-    sudo apt-get -y install libgdal1 postgresql-9.3 postgresql-9.3-postgis-2.1 \
-        postgresql-client-9.3
+    echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" | sudo tee /etc/apt/sources.list.d/postgis.list
+    wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+    sudo apt-get update && sudo apt-get -y install libgdal1 postgresql-9.3 postgresql-9.3-postgis-2.1 postgresql-client-9.3
 
     sudo apt-get -y install protobuf-compiler libprotobuf-c0-dev protobuf-c-compiler
 
-    sudo aptitude -y install build-essential python-dev libprotobuf-dev \
-        libtokyocabinet-dev python-psycopg2 libgeos-c1
+    sudo aptitude -y install build-essential python-dev libprotobuf-dev libtokyocabinet-dev python-psycopg2 libgeos-c1
 
     # create the db and user
     sudo su -p - postgres -c "createuser osm -s -d"
@@ -75,8 +71,7 @@ Then save the file and:
     git clone git://github.com/openstreetmap/osm2pgsql.git
     cd osm2pgsql
 
-    sudo apt-get -y install -y dh-autoreconf libxml2-dev libbz2-dev libgeos-dev \
-        libproj-dev libpq-dev libgeos++-dev
+    sudo apt-get -y install -y dh-autoreconf libxml2-dev libbz2-dev libgeos-dev libproj-dev libpq-dev libgeos++-dev
 
     ./autogen.sh && ./configure && make
     export PATH=$PATH:`pwd`
@@ -86,11 +81,9 @@ Then save the file and:
     # get and load the new york extract into the db
     curl -O https://s3.amazonaws.com/metro-extracts.mapzen.com/new-york.osm.pbf
 
-    osm2pgsql -d osm -U osm --slim --style osm2pgsql.style --hstore new-york.osm.pbf \
-        --cache-strategy sparse
+    osm2pgsql -d osm -U osm --slim --style osm2pgsql.style --hstore new-york.osm.pbf --cache-strategy sparse
 
-    sudo pip install --allow-external PIL --allow-unverified PIL PIL modestmaps \
-        simplejson werkzeug
+    sudo pip install --allow-external PIL --allow-unverified PIL PIL modestmaps simplejson werkzeug
 
     sudo python setup.py install
     sudo pip install Shapely
