@@ -64,7 +64,8 @@ Then save the file and:
     sudo apt-get -y install git-core
 
     # if you are on Windows, you may need to start the ssh-agent service to enable
-    # ssh forwarding: http://stackoverflow.com/questions/3669001/getting-ssh-agent-to-work-with-git-run-from-windows-command-shell/15870387#15870387
+    # ssh forwarding every time you start a new bash session: 
+    # http://stackoverflow.com/questions/3669001/getting-ssh-agent-to-work-with-git-run-from-windows-command-shell/15870387#15870387
     
     git clone git@github.com:meetar/vector-datasource.git
 
@@ -101,7 +102,7 @@ Then save the file and:
     sudo python setup.py install
     ./scripts/tilestache-server.py -c ../vector-datasource/tilestache.cfg -i 0.0.0.0
 
-In a new terminal window, get the vector-map repo and start the HTTP server:
+In a new terminal window, get the vector-map repo and start the HTTP server (Windows reminder: you'll need to restart the ssh-agent if you start a new bash session):
 
     vagrant ssh
     git clone git@github.com:bcamper/vector-map.git
