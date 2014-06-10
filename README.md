@@ -65,6 +65,9 @@ Then save the file and:
     # install git and get the datasource
     sudo apt-get -y install git-core
 
+    # if you are on Windows, you may need to start the ssh-agent service to enable
+    # ssh forwarding: http://stackoverflow.com/questions/3669001/getting-ssh-agent-to-work-with-git-run-from-windows-command-shell/15870387#15870387
+    
     git clone git@github.com:meetar/vector-datasource.git
 
     # get and make osm2pgsql from source
