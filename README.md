@@ -42,9 +42,7 @@ After cloning this repository and starting a terminal window inside the director
     sudo su -p - postgres -c "createuser osm -s -d"
     sudo su -p - postgres -c "createdb -O osm osm"
 
-Edit `/etc/postgresql/9.3/main/pg_hba.conf` (probably have to use vi, sorry)
-
-Change the METHOD for these two lines to "trust":
+Edit `/etc/postgresql/9.3/main/pg_hba.conf` (probably have to use vi, sorry) and change the METHOD for these two lines to "trust":
 
     # "local" is for Unix domain socket connections only
     local   all             all                                     trust
