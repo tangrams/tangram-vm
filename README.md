@@ -16,7 +16,7 @@ Live public demo: <http://vector.io/vector-map>
 
 ###vector-map vm setup
 
-After cloning this repository and starting a terminal window inside the directory, the steps below will provision the VM. Eventually this will be automated with Puppet.
+After cloning this repository and starting a terminal window inside the directory, the steps below will provision the VM. (Hopefully eventually this will be automated somehow, possibly with Puppet or Docker.)
 
     # start the VM
     vagrant up
