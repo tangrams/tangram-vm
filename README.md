@@ -1,7 +1,7 @@
-vector-map-vm
+tangram-vm
 =============
 
-A Vagrant VM for setting up and running vector-map (https://github.com/bcamper/vector-map).
+A Vagrant virtual machine for setting up and running the Tangram WebGL vector-map display library (https://github.com/bcamper/tangram).
 
 Live public demo: <http://vector-map.mapzen.com>
 
@@ -16,7 +16,7 @@ Live public demo: <http://vector-map.mapzen.com>
 
 ###vector-map vm setup
 
-After cloning this repository and starting a terminal window inside the directory, the steps below will provision the VM.
+After cloning this repository and starting a terminal window inside the directory, the steps below will provision the VM. (You may need to confirm a ssh-authentication step.)
 
     # start the VM
     vagrant up
@@ -34,6 +34,7 @@ After cloning this repository and starting a terminal window inside the director
 Test the setup in a browser: <http://localhost:9000/#mapzen>
 
 Note for Windows users: you may need to start the ssh-agent for each new bash session in order for git authentication to work. From outside the vm, run:
+
     eval `ssh-agent -s` 
     ssh-add ~/.ssh/*_rsa
 
