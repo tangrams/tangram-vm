@@ -34,6 +34,7 @@ After cloning this repository and starting a terminal window inside the director
 Test the setup in a browser: <http://localhost:9000/#mapzen>
 
 Note for Windows users: you may need to start the ssh-agent for each new bash session in order for git authentication to work. From outside the vm, run:
+
     eval `ssh-agent -s` 
     ssh-add ~/.ssh/*_rsa
 
