@@ -1,4 +1,4 @@
-vector-map-vm
+tangram-vm
 =============
 
 A Vagrant virtual machine for setting up and running the Tangram WebGL vector-map display library (https://github.com/bcamper/tangram).
