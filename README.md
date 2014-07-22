@@ -16,7 +16,7 @@ Live public demo: <http://vector-map.mapzen.com>
 
 ###vector-map vm setup
 
-After cloning this repository and starting a terminal window inside the directory, the steps below will provision the VM.
+After cloning this repository and starting a terminal window inside the directory, the steps below will provision the VM. (You may need to confirm a ssh-authentication step.)
 
     # start the VM
     vagrant up
