@@ -50,7 +50,7 @@ cd ~
 git clone git@github.com:TileStache/TileStache.git
 cd TileStache
 sudo python setup.py install
-echo "\nStarting TileStache server -- next, open a new window in the vector-map-vm directory,\n 'vagrant ssh', 'cd /vagrant', and 'bash install2.sh'"
+echo -e "\nStarting TileStache server -- next, open a new window in the vector-map-vm directory,\n 'vagrant ssh', 'cd /vagrant', and 'bash install2.sh'"
 ./scripts/tilestache-server.py -c tilestache.cfg -i 0.0.0.0
 
 # End of step 1!
