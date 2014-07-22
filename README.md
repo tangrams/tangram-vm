@@ -1,7 +1,7 @@
 vector-map-vm
 =============
 
-A Vagrant VM for setting up and running vector-map (https://github.com/bcamper/vector-map).
+A Vagrant virtual machine for setting up and running the Tangram WebGL vector-map display library (https://github.com/bcamper/tangram).
 
 Live public demo: <http://vector-map.mapzen.com>
 
