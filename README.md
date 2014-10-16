@@ -1,7 +1,7 @@
 tangram-vm
 =============
 
-A Vagrant virtual machine (VM) for setting up and running the Tangram WebGL vector-map display library (https://github.com/bcamper/tangram).
+A Vagrant virtual machine (VM) for setting up and running the Tangram WebGL vector-map display library (https://github.com/tangrams/tangram).
 
 (A virtual machine is an operating system emulator. This one runs Ubuntu, one of the most popular versions of Linux.)
 
